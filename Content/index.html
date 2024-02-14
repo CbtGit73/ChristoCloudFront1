@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Ninjas Worldwide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
+    <link rel="stylesheet" href="all.min.css">  <!-- https://fontawesome.com/-->  
+    <link rel="stylesheet" href="magnific-popup.css">       <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="tooplate-vertex.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+
+    <!-- Nav -->
+    <nav class="tm-nav">
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul id="tm-main-nav">
+            <li class="nav-item">                                
+                <a href="#About" class="nav-link current">
+                    About
+                </a>
+            </li>            
+            <li class="nav-item">                                
+                <a href="#Flag1" class="nav-link current">
+                    Flag Of Colombia
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Flag2" class="nav-link">
+                    Flag of Amazonas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Flag3" class="nav-link">
+                    Flag Of The Colombian Air Force
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Flag4" class="nav-link">
+                    Flag Of Santander
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <Body background="Ouro_Preto.jpg">
+    </Body>
+    
+
+    <!-- Flag1 -->
+    <div id="About" class="tm-section">
+    <body>
+        <div class=”center”>
+          <h2><br>
+            
+            Colombia, officially the Republic of Colombia, is a country mostly in South America with insular regions in North America. The Colombian mainland is bordered by the Caribbean Sea to the north, Venezuela to the east and northeast, Brazil to the southeast, Ecuador and Peru to the south and southwest, the Pacific Ocean to the west, and Panama to the northwest. Colombia is divided into 32 departments. The Capital District of Bogotá is also the country's largest city hosting the main financial and cultural hub. Other major urbes include Medellín, Cali, Barranquilla, Cartagena, Santa Marta, Cúcuta, Ibagué, Villavicencio and Bucaramanga. It covers an area of 1,141,748 square kilometers (440,831 sq mi) and has a population of around 52 million. Its rich cultural heritage including language, religion, cuisine, and art—reflects its history as a colony, fusing cultural elements brought by immigration from Europe and the Middle East with those brought by the African diaspora as well as with those of the various Indigenous civilizations that predate colonization. Spanish is the official language, although Creole English and 64 other languages are recognized regionally.</h2>
+      </div>
+      </body>
+    </div> <!-- #About -->  
+
+    <!-- Flag1 -->
+    <div id="Flag1" class="tm-section">
+        <div class=”center”>
+            <video controls class="col-12" loop mute  width="1200" height="672" align-self="left">
+              <source id="hvid" src="Cut4.mp4" type="video/mp4">
+          </video>
+            
+        </div>
+        
+        <!-- Flag1 right -->
+        <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Flag_of_Colombia.jpg"></div>
+    </div> <!-- #Flag1 -->
+
+        <div id="Flag2" class="tm-section">
+            <!-- Flag2 left -->
+            <div class=”center”>
+                <video controls class="col-12" loop mute  width="1200" height="672" align-self="left">
+                  <source id="hvid" src="Cut3.mp4" type="video/mp4">
+              </video>
+                
+            </div>
+            
+            <!-- Flag2 right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Flag_of_Amazonas_Colombia.jpg"></div>
+        </div> <!-- #Flag2 -->
+        
+        <div id="Flag3" class="tm-section">
+            <!-- Flag3 left -->
+            <div class=”center”>
+                <video controls class="col-12" loop mute  width="1200" height="672" align-self="left">
+                  <source id="hvid" src="Cut2.mp4" type="video/mp4">
+              </video>
+                
+            </div>
+            
+            <!-- Flag3 right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Flag_of_the_Colombian_Air_Force.jpg"></div>
+        </div> <!-- #Flag3 -->
+
+        <div id="Flag4" class="tm-section">
+            <!-- Flag4 left -->
+            <div class=”center”>
+                <video controls class="col-12" loop mute  width="1200" height="672" align-self="left">
+                  <source id="hvid" src="Cut1.mp4" type="video/mp4">
+              </video>
+                
+            </div>
+
+            <!-- Flag4 right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="Flag_of_Santander_Department.jpg"></div>
+        </div> <!-- #Flag4 -->            
+
+
+    <script src="plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+            
+            /*************** Navigation *****************/
+
+            const tmMainNav = $("#tm-main-nav");
+
+            tmMainNav.singlePageNav({
+                filter: ':not(.external)'
+            });
+
+            $('.navbar-toggler').click(function(e) {
+                e.stopPropagation();
+                tmMainNav.toggleClass('show');
+            });
+
+            $("html").click(function(e) {
+                $("#tm-main-nav").removeClass("show");
+            });
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#About').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+</body>
+</html>
